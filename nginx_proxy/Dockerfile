@@ -10,6 +10,7 @@ MAINTAINER The CentOS Project <cloud-ops@centos.org>
 RUN yum -y update; yum clean all
 RUN yum -y install epel-release tar ; yum clean all
 RUN yum -y install nginx ; yum clean all
+RUN yum -y install telnet ; yum clean all
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD conf.d /etc/nginx/conf.d
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
